@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EmakinaTask.Models.DisplayInfo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Info</title>
+</head>
+<body>
+    <div> 
+        <hr/>
+        <table>
+            @foreach (var item in Model.Reverse().Take(10).Reverse())
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Browser)
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
