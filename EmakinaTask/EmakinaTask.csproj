@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -128,7 +134,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BoardGameController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,6 +145,14 @@
     <Compile Include="Migrations\202007092024317_DisplayInfo.designer.cs">
       <DependentUpon>202007092024317_DisplayInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007100827464_RequiredValues.cs" />
+    <Compile Include="Migrations\202007100827464_RequiredValues.designer.cs">
+      <DependentUpon>202007100827464_RequiredValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007100832230_RangeValues.cs" />
+    <Compile Include="Migrations\202007100832230_RangeValues.designer.cs">
+      <DependentUpon>202007100832230_RangeValues.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BoardGame.cs" />
     <Compile Include="Models\DisplayInfo.cs" />
@@ -150,6 +163,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -178,9 +192,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\BoardGame\Index.cshtml" />
     <Content Include="Views\BoardGame\Create.cshtml" />
     <Content Include="Views\BoardGame\Details.cshtml" />
@@ -209,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007092024317_DisplayInfo.resx">
       <DependentUpon>202007092024317_DisplayInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007100827464_RequiredValues.resx">
+      <DependentUpon>202007100827464_RequiredValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007100832230_RangeValues.resx">
+      <DependentUpon>202007100832230_RangeValues.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,18 @@
+﻿namespace EmakinaTask.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class RequiredValues : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.BoardGames", "GameName", c => c.String(nullable: false));
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.BoardGames", "GameName", c => c.String());
+        }
+    }
+}

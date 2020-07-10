@@ -13,9 +13,17 @@ namespace EmakinaTask.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+        [Display(Name = "Name of the game")]
+        [StringLength(100,MinimumLength=3)]
         public string GameName { get; set; }
+        [Display(Name = "Minimal amount of players")]
+        [Range(1, 100)]
         public int MinPlayers { get; set; }
+        [Display(Name = "Maximal amount of players")]
+        [Range(1, 100)]
         public int MaxPlayers { get; set; }
+        [Display(Name = "Minimal age of players")]
+        [Range(1,100)]
         public int MinAge { get; set; }
         
         public virtual ICollection<DisplayInfo> Infos { get; set; }
